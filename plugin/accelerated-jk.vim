@@ -1,8 +1,8 @@
 " Initialization of variables {{{
 " Check if deceleration is enabled.
 let g:accelerated_jk_enable_deceleration = get(g:, 'accelerated_jk_enable_deceleration', 0)
-let g:accelerated_jk_acceleration_limit = get(g:, 'accelerated_jk_acceleration_limit', 250)
 " let g:accelerated_jk_acceleration_limit = get(g:, 'accelerated_jk_acceleration_limit', 150)
+let g:accelerated_jk_acceleration_limit = get(g:, 'accelerated_jk_acceleration_limit', 250)
 
 " Acceleration rate.
 "   - Index + 1 represents steps of j/k mappings.
@@ -32,12 +32,12 @@ endif
 
 " Default mappings {{{
 " Time driven acceleration
-nnoremap <silent><Plug>(accelerated_gj) :<C-u>call accelerated#time_driven#command('gj')<CR>
-nnoremap <silent><Plug>(accelerated_gk) :<C-u>call accelerated#time_driven#command('gk')<CR>
-nnoremap <silent><Plug>(accelerated_j)  :<C-u>call accelerated#time_driven#command('j')<CR>
-nnoremap <silent><Plug>(accelerated_k)  :<C-u>call accelerated#time_driven#command('k')<CR>
-nnoremap <silent><Plug>(accelerated_l)  :<C-u>call accelerated#time_driven#command('l')<CR>
-nnoremap <silent><Plug>(accelerated_h)  :<C-u>call accelerated#time_driven#command('h')<CR>
+noremap <silent><Plug>(accelerated_gj) :<C-u>call accelerated#time_driven#command('gj')<CR>
+noremap <silent><Plug>(accelerated_gk) :<C-u>call accelerated#time_driven#command('gk')<CR>
+noremap <silent><Plug>(accelerated_j)  :<C-u>call accelerated#time_driven#command('j')<CR>
+noremap <silent><Plug>(accelerated_k)  :<C-u>call accelerated#time_driven#command('k')<CR>
+noremap <silent><Plug>(accelerated_l)  :<C-u>call accelerated#time_driven#command('l')<CR>
+noremap <silent><Plug>(accelerated_h)  :<C-u>call accelerated#time_driven#command('h')<CR>
 " Position driven acceleration
 nnoremap <silent><Plug>(accelerated_jk_gj_position) :<C-u>call accelerated#position_driven#command('gj')<CR>
 nnoremap <silent><Plug>(accelerated_jk_gk_position) :<C-u>call accelerated#position_driven#command('gk')<CR>

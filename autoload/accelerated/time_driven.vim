@@ -57,7 +57,8 @@ function! accelerated#time_driven#command(cmd) "{{{
 
     " if specified count, move like original j/k command
     if v:count
-        execute 'normal!' v:count.a:cmd
+        " execute 'normal!' v:count.a:cmd
+        call feedkeys(v:count.a:cmd, "n")
         return
     endif
 
@@ -75,7 +76,8 @@ function! accelerated#time_driven#command(cmd) "{{{
     let step = s:acceleration_step()
 
     " execute command with step count
-    execute 'normal!' step.a:cmd
+    " execute 'normal!' step.a:cmd
+    call feedkeys(step.a:cmd, "n")
 
     " prepare for next j/k
     if s:key_count < s:end_of_count
