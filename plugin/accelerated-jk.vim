@@ -1,14 +1,14 @@
 " Initialization of variables {{{
 " Check if deceleration is enabled.
 let g:accelerated_jk_enable_deceleration = get(g:, 'accelerated_jk_enable_deceleration', 0)
-let g:accelerated_jk_acceleration_limit = get(g:, 'accelerated_jk_acceleration_limit', 150)
+let g:accelerated_jk_acceleration_limit = get(g:, 'accelerated_jk_acceleration_limit', 250)
+" let g:accelerated_jk_acceleration_limit = get(g:, 'accelerated_jk_acceleration_limit', 150)
 
 " Acceleration rate.
 "   - Index + 1 represents steps of j/k mappings.
-"   - Values represent required number of typing j/k to advance steps.
-" For example, if type 'j' 7 times and type 'j', it move cursor 2 lines.
 if !exists("g:accelerated_jk_acceleration_table")
-    let g:accelerated_jk_acceleration_table = [7,12,17,21,24,26,28,30]
+    " let g:accelerated_jk_acceleration_table = [7,12,17,21,24,26,28,30]
+    let g:accelerated_jk_acceleration_table = [7,12,17,21,25,29,32,35]
 endif
 
 
