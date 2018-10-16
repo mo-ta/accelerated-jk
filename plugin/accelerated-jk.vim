@@ -32,10 +32,12 @@ endif
 
 " Default mappings {{{
 " Time driven acceleration
-nnoremap <silent><Plug>(accelerated_jk_gj) :<C-u>call accelerated#time_driven#command('gj')<CR>
-nnoremap <silent><Plug>(accelerated_jk_gk) :<C-u>call accelerated#time_driven#command('gk')<CR>
-nnoremap <silent><Plug>(accelerated_jk_j)  :<C-u>call accelerated#time_driven#command('j')<CR>
-nnoremap <silent><Plug>(accelerated_jk_k)  :<C-u>call accelerated#time_driven#command('k')<CR>
+nnoremap <silent><Plug>(accelerated_gj) :<C-u>call accelerated#time_driven#command('gj')<CR>
+nnoremap <silent><Plug>(accelerated_gk) :<C-u>call accelerated#time_driven#command('gk')<CR>
+nnoremap <silent><Plug>(accelerated_j)  :<C-u>call accelerated#time_driven#command('j')<CR>
+nnoremap <silent><Plug>(accelerated_k)  :<C-u>call accelerated#time_driven#command('k')<CR>
+nnoremap <silent><Plug>(accelerated_l)  :<C-u>call accelerated#time_driven#command('l')<CR>
+nnoremap <silent><Plug>(accelerated_h)  :<C-u>call accelerated#time_driven#command('h')<CR>
 " Position driven acceleration
 nnoremap <silent><Plug>(accelerated_jk_gj_position) :<C-u>call accelerated#position_driven#command('gj')<CR>
 nnoremap <silent><Plug>(accelerated_jk_gk_position) :<C-u>call accelerated#position_driven#command('gk')<CR>
