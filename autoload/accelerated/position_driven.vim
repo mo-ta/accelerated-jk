@@ -11,6 +11,8 @@ endfunction
 let s:key_count = 0
 let s:prev_j_pos = getpos('.')
 let s:prev_k_pos = copy(s:prev_j_pos)
+let s:prev_l_pos = copy(s:prev_j_pos)
+let s:prev_h_pos = copy(s:prev_j_pos)
 let s:prev_gj_pos = copy(s:prev_j_pos)
 let s:prev_gk_pos = copy(s:prev_j_pos)
 let s:acceleration_table = sort(deepcopy(g:accelerated_jk_acceleration_table), 's:acc_table_cmp')
